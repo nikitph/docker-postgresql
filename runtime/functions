@@ -150,7 +150,7 @@ initialize_database() {
           exit 1
         fi
 
-        echo -n "Waiting for $REPLICATION_HOST to accept connections (60s timeout)"
+        echo -n "Now Waiting for $REPLICATION_HOST to accept connections (60s timeout)"
         timeout=60
         while ! ${PG_BINDIR}/pg_isready -h $REPLICATION_HOST -p $REPLICATION_PORT -t 1 >/dev/null 2>&1
         do
